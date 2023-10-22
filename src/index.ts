@@ -1,21 +1,13 @@
-class Sorter {
-  constructor(public collection: number[]) {}
+import { Sorter } from "./Sorter";
+import { NumbersCollection } from "./NumbersCollection";
+import { CharactersCollection } from "./CharactersCollection";
 
-  // * bubble sort Algorithm
-  sort(): void {
-    const { length } = this.collection;
-    for (let i = 0; i < length; i++) {
-      for (let j = 0; j < length - i; j++) {
-        if (this.collection[j] > this.collection[j + 1]) {
-          let temp = this.collection[j];
-          this.collection[j] = this.collection[j + 1];
-          this.collection[j + 1] = temp;
-        }
-      }
-    }
-  }
-}
+// const numbersCollection = new NumbersCollection([-10000, 30, -4, 0]);
+// const sorter = new Sorter(numbersCollection);
+// sorter.sort();
+// console.log("sorted arr", numbersCollection.data);
 
-const sorter = new Sorter([10, 30, -4, 0]);
+const charactersCollection = new CharactersCollection("ZzZaAXxX");
+const sorter = new Sorter(charactersCollection);
 sorter.sort();
-console.log("sorted arr", sorter.collection);
+console.log("sorted string", charactersCollection.data);

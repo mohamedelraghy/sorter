@@ -1,9 +1,7 @@
 import { Sorter } from "./Sorter";
 export class NumbersCollection extends Sorter {
   constructor(public data: number[]) {
-    super(
-      
-    );
+    super();
   }
 
   /**
